@@ -31,6 +31,37 @@ jQuery(function($) {
 	});
 
 	/* ==========================================================================
+	   Moment-jalaali
+	   ========================================================================== */
+
+	pdigit = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+	var digit2p = function (id) {
+		var self = this;
+		$(id).each(function (key, digit) {
+			var d = $(digit);
+			var dt = d.text();
+			dt = dt.replace(/[0-9]/gm, function(w) {
+				return pdigit[w];
+			});
+			d.html(dt);
+		});
+	};
+	var to_jalaali = function (id) {
+		var then = $(id);
+		var self = this;
+		if(then.attr("data-date")){
+			var date = moment(new Date(then.attr("data-date")));
+			var persianDate = date.format("jYYYY/jM/jD").toString().replace(/[0-9]/gm, function(w) {
+				return pdigit[w];
+			});
+			then.html(persianDate);
+		}
+	};
+	to_jalaali('.moment-date');
+	digit2p('.digit2p');
+
+
+	/* ==========================================================================
 	   Parallax cover
 	   ========================================================================== */
 	   
@@ -137,4 +168,9 @@ jQuery(function($) {
 			$(this).parent().addClass('activated');
 		});
 	}
+
+
+	/* ==========================================================================
+	   Draws simple SVG flow chart diagrams
+	   ========================================================================== */
 });

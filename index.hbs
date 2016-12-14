@@ -5,12 +5,12 @@
 		<nav id="navigation">
 			{{#if @blog.logo}}
 			<span class="blog-logo">
-				<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+				<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
 			</span>
 			{{/if}}
 			{{#if @blog.navigation}}
 			<span id="menu-button" class="nav-button">
-				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+				<a class="menu-button"><i class="ic ic-menu"></i></a>
 			</span>
 			{{/if}}
 		</nav>

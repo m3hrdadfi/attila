@@ -11,21 +11,21 @@
 		<nav id="navigation">
 			{{#if @blog.logo}}
 			<span class="blog-logo">
-				<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+				<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
 			</span>
 			{{else}}
 			<span id="home-button" class="nav-button">
-				<a class="home-button" href="{{@blog.url}}" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+				<a class="home-button" href="{{@blog.url}}" title="Home"><i class="ic ic-arrow-left"></i></a>
 			</span>
 			{{/if}}
 			{{#if @blog.navigation}}
 			<span id="menu-button" class="nav-button">
-				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+				<a class="menu-button"><i class="ic ic-menu"></i></a>
 			</span>
 			{{/if}}
 		</nav>
 		<h1 class="post-title">{{{title}}}</h1>
-		<span class="post-meta">{{author}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+		<span class="post-meta">{{author}} | <time class="moment-date" data-date="{{date format="DD MMM YYYY"}}" datetime="{{date format='DD MMM YYYY'}}">{{date format="DD MMM YYYY"}}</time></span>
 		{{#if image}}<div class="post-cover cover" style="background-image: url('{{image}}');"></div>{{/if}}
 	</div>
 </header>
@@ -75,13 +75,13 @@
 							<span class="post-author-location"><i class="ic ic-location"></i> {{location}}</span>
 						{{/if}}
 						{{#if website}}
-							<span class="post-author-website"><a href="{{website}}"><i class="ic ic-link"></i> Website</a></span>
+							<span class="post-author-website"><a href="{{website}}"><i class="ic ic-link"></i></a></span>
 						{{/if}}
 						{{#if twitter}}
-							<span class="post-author-twitter"><a target="_blank" href="https://twitter.com/{{twitter}}"><i class="ic ic-twitter"></i> Twitter</a></span>
+							<span class="post-author-twitter"><a target="_blank" href="https://twitter.com/{{twitter}}"><i class="ic ic-twitter"></i></a></span>
 						{{/if}}
 						{{#if facebook}}
-							<span class="post-author-facebook"><a target="_blank" href="https://facebook.com/{{facebook}}"><i class="ic ic-facebook"></i> Facebook</a></span>
+							<span class="post-author-facebook"><a target="_blank" href="https://facebook.com/{{facebook}}"><i class="ic ic-facebook"></i></a></span>
 						{{/if}}
 					</div>
 					<div class="clear"></div>
@@ -92,7 +92,7 @@
 			
 
 			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+				<a id="show-disqus" class="post-comments-activate">نمایش دیدگاه ها</a>
 			    <div id="disqus_thread"></div>
 
 			</section>
@@ -125,3 +125,7 @@
 </main>
 
 {{/post}}
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 

@@ -1,11 +1,11 @@
 <nav class="pagination" role="pagination">
 	<div class="inner">
 		{{#if prev}}
-		<a class="pagination-next" href="{{page_url prev}}"><i class="ic ic-arrow-left"></i> <span class="pagination-label">Newer Posts</span></a>
+		<a class="pagination-next" href="{{page_url prev}}"><span class="pagination-label">نوشته‌های تازه‌تر</span> <i class="ic ic-arrow-left"></i></a>
 		{{/if}}
-		<span class="pagination-info">Page {{page}} of {{pages}}</span>
+		<span class="pagination-info">صفحه <span class="digit2p">{{page}}</span> از <span class="digit2p">{{pages}}</span></span>
 		{{#if next}}
-		<a class="pagination-prev" href="{{page_url next}}"><span class="pagination-label">Older Posts</span> <i class="ic ic-arrow-right"></i></a>
+		<a class="pagination-prev" href="{{page_url next}}"><i class="ic ic-arrow-right"></i> <span class="pagination-label">نوشته‌های کهنه‌تر</span></a>
 		{{/if}}
 		<div class="clear"></div>
 	</div>

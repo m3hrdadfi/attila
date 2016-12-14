@@ -34,3 +34,10 @@
   font-weight: 700;
   src: local('Fira Sans Bold'), local('FiraSans-Bold'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2') format('woff2'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOqRDOzjiPcYnFooOUGCOsRk.woff') format('woff');
 }
+@font-face {
+  font-family: 'Behdad-Regular';
+  src: url('../font/Behdad-Regular.eot');
+  src: url('../font/Behdad-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Behdad-Regular.woff') format('woff'), url('../font/Behdad-Regular.ttf') format('truetype'), url('../font/Behdad-Regular.svg#Behdad-Regular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
